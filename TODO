@@ -1,0 +1,27 @@
+ideally we want something like this:
+
+-------------------------
+file called "index.html":
+-------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>current time</title>
+</head>
+<body>
+ <p>the current universal time is
+  <(
+   (get-universal-time)
+   )>
+ </p>
+</body>
+</html>
+
+-------------------------
+
+so essentially the <( tag works like php's <?php with )> as php's ?>
+
+i've started this project with no plan on how to get it done, in fact,
+that's one of the main reasons i decided to start it, to have the experience
+of now knowing at all how to accomplish a goal yet set out to do it anyway.
