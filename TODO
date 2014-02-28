@@ -25,3 +25,31 @@ so essentially the <( tag works like php's <?php with )> as php's ?>
 i've started this project with no plan on how to get it done, in fact,
 that's one of the main reasons i decided to start it, to have the experience
 of now knowing at all how to accomplish a goal yet set out to do it anyway.
+
+--------------------------------------------------------------------------------
+
+the new file, process-html-file.lisp, will read an html file to a string, then,
+identify each instance of html-embedded lisp code, process the code instances,
+replace the embedded code with that to which it evaluates when treated as lisp.
+
+this is great yes, but how will we designate particular html files as containing
+embedded lisp? first thought may be by file extension. just as .php files are
+processed as html until the <?php indicator tells it to work as php (and the ?>
+indicator tells it to stop) we could have a .htcl extension indicate that the
+file is hypertext with embedded commonlisp.
+
+a file with that extension would then do a few things:
+
+1) run itself through process-html-file.lisp
+2) save the results of filename.htcl to filename.html
+3) direct the browser to the html file and
+4) keep the contents of the htcl file hidden
+
+what will this mean? can i get around dealing with the webserver? perhaps an
+index lisp file, processed as a sbcl shell script using modlisp2 under apache,
+could read the directory, take directions, and create the appropriate files
+...
+
+we'll get to that after properly processing a html-with-embedded-cl file.
+
+--------------------------------------------------------------------------------
