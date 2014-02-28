@@ -13,6 +13,7 @@ make lisp code easily-embeddable in html &amp; html-ish file
 basic example of how to embed lisp in your htcl files:
 
 ----------------------------------------
+<![CDATA[
 
 <div user="<((sb-posix::getenv "user"))>">
  <pre id="timestamp">
@@ -21,6 +22,8 @@ basic example of how to embed lisp in your htcl files:
   )>
  </pre>
 </div>
+
+]]>
 
 ----------------------------------------
 
