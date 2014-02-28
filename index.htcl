@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cl-html-embed test</title>
+</head>
+<body>
+<div id="mainContainer">
+<p>the sum of 5 and 3 is <((format nil "~a" (+ 5 3)))></p>
+<p>this paragraph has no embedded lisp</p>
+<p>a second sum, of 10 and 20 is <((format nil "~a" (+ 10 20)))></p>
+<br />
+<p>the current timestamp is <((get-universal-time))> in universal format</p>
+<p>the next paragraph will be a list of numbers one through twenty!</p>
+<p><((loop for i from 1 to 20 collect i))></p>
+</div>
+</body>
+</html>
